@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="style/chatstyle.css"/>
+	<link type="text/css" href="mapstyle.css" rel="stylesheet" media="all" />
+    <link rel="stylesheet" href="style/bootstrap.css"/>
+
+    <title>Event Tracker With Chat Integration</title>
+
+    <script type="text/javascript" src="support/date.js"></script>
+	
+	<script>
+		    document.onready = function() {
+				document.getElementById( "seachbuttonzip" ).onclick = function( trackerevent ) {
+					msearch( document.getElementById( "seachboxzip" ).value );
+				};
+				document.getElementById( "searchclear" ).onclick = function( trackerevent ) {
+					map.clearMarkers();
+					nclear(document.getElementById("weather"));
+					initialize();
+				};
+				document.getElementById( "seachboxzip" ).onkeypress = function( trackerevent ) {
+				if( trackerevent.which == 13 ) {
+					msearch( document.getElementById( "seachboxzip" ).value );
+				}
+				};
+			}
+	</script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <div class="logo">
+
+        <a href="#"> <img src="images/logo.png"/> </a>
+        <span>Event Tracker</span>
+
+    </div>
+
+    <section class="main" id="main">
+
+        <div>
+
+            <h1 class="center">Event Tracker <b>With Chat Integration</b></h1>
+            <h4 class="center">Search for events located across the world and create posts to talk about your experiences before or after attending these events.</h4>
+        </div>
+
+        <div class="row home-buttons-container">
+
+            <div class="col-md-12">
+
+                <div class="center col-lg-6">
+
+                    <a href="#/login">
+                        <button type="button" class="btn btn-lg btn-warning home-btn">Login</button>
+                    </a>
+                </div>
+
+                <div class="center col-lg-6">
+
+                    <a href="#/userregister">
+                        <button type="button" class="btn btn-lg btn-success home-btn">Register</button>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+</div>
+<body onload="initialize()">
+		<div id="content">
+		<h1>Event Tracker with Chat integration</h1>
+		<p>Search for events that are located around the world such as concerts, science fairs, culture gatherings, etc.</p>
+
+<div id="searchArea">
+			Search by postal code: <input id="seachboxzip" type="text"  size="10" />
+			<input id="seachbuttonzip" type="button" value="Search"/>
+			<input id="searchclear" type="button" value="Clear results"/>
+		</div>
+
+		<div id="weather"></div>
+		<div id="blanks"></div>
+		<div id="map_canvas"></div>
+		<footer> Jacob Kizhakeparampil - 2015 </footer>
+		</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<script type="text/javascript" src="support/jquery.min.js"></script>
+<script type="text/javascript" src="map.js"></script>
+<script type="text/javascript" src="support/jquery.js"></script>
+<script type="text/javascript" src="support/sammy.js"></script>
+<script type="text/javascript" src="support/mustache.js"></script>
+<script type="text/javascript" src="support/jquery.noty.packaged.js"></script>
+
+<script type="text/javascript" src="javascripts/request.js"></script>
+<script type="text/javascript" src="javascripts/usertask.js"></script>
+<script type="text/javascript" src="javascripts/services.js"></script>
+<script type="text/javascript" src="javascripts/readers.js"></script>
+<script type="text/javascript" src="javascripts/application.js"></script>
+
+
+
+</body>
+</html>
