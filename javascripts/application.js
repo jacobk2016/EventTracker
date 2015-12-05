@@ -3,8 +3,8 @@ var app = app || {};
 
 (function () {
     var parseapi = 'https://api.parse.com/1/';
-    var parseAppId = 'Md908dydiyFLvq6r82CSZPSlIoKZrBVr0Lnjtd9R';
-    var parseRestApiKey = 'G5mW4lVJNnvIUZ9auYaLt6TGSomYJYasdpZRbu2y';
+    var parseAppId = 'hSdKMU5hs7Ixycu8DjpMVnKv1CeVdGz68LMe0deI';
+    var parseRestApiKey = '2VbpvGCDQYcWQWt9A9P79yqEBUkMDdN7GN68EYEr';
 
     var parsesupport = new app.Services(parseapi, parseAppId, parseRestApiKey);
 
@@ -144,9 +144,9 @@ var app = app || {};
         this.get('#/user/postcreate', function () {
             var userloggedin = app.usertask.usercurrent();
 
-            var postContent = $('#post-content.form-control').val();
+            var postsummary = $('#postsummary.form-control').val();
             var mainuser = {
-                content: postContent
+                content: postsummary
             }
 
             parsesupport.users.postcreate(mainuser.content, function (data) {
@@ -181,7 +181,7 @@ var app = app || {};
 
             var userinfo = {
 
-                objectId: $("#profileedit-form").data('object-id'),
+                objectId: $("#profileEdit-form").data('object-id'),
                 password: $("#password.form-control").val(),
                 name: $("#name.form-control").val(),
                 about: $("#about.form-control").val(),

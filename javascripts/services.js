@@ -6,8 +6,8 @@ app.Services = function (parseapi, parseAppId, parseRestApiKey) {
 
     function getHeaders() {
         var headers = {
-            'X-Parse-Application-Id': 'Md908dydiyFLvq6r82CSZPSlIoKZrBVr0Lnjtd9R',
-                    'X-Parse-REST-API-Key': 'G5mW4lVJNnvIUZ9auYaLt6TGSomYJYasdpZRbu2y'
+            'X-Parse-Application-Id': 'hSdKMU5hs7Ixycu8DjpMVnKv1CeVdGz68LMe0deI',
+                    'X-Parse-REST-API-Key': '2VbpvGCDQYcWQWt9A9P79yqEBUkMDdN7GN68EYEr'
         };
 
         var userloggedin = app.usertask.usercurrent();
@@ -136,6 +136,8 @@ app.Services = function (parseapi, parseAppId, parseRestApiKey) {
             return app.requestdetails.get(url, userinfo, getHeaders(), success, error);
 
         },
+		
+		
 
 
         //Post by ID

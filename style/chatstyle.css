@@ -1,10 +1,10 @@
 body {
     font-family: Calibri;
     font-size: 18px !important;
-    background-image: url('../images/bg-pattern.jpg');
+    background-image: url('../images/background.jpg');
 }
 
-.logo {
+.headerPic {
     height: 30px;
     background-color: lightgray;
     vertical-align: top;
@@ -12,7 +12,7 @@ body {
     border-bottom: solid 1px #757575;
 }
 
-.logo img {
+.headerPic img {
     width: 25px;
     height: 25px;
     display: inline-block;
@@ -25,19 +25,19 @@ body {
 }
 
 .header {
-    background-image: url('../images/clouds.png');
+    background-image: url('../images/banner.png');
     background-position: center center;
 }
 
-.header .image-container {
+.header .picContainer {
     margin: 2% 2% 0 2%;
 }
 
-.image-container, .summary-container, .post-image, .post-info, .box {
+.picContainer, .paragraph, .postpic, .postcontent {
     display: inline-block;
 }
 
-.post-content {
+.postsummary {
     padding: 0 1%;
 }
 
@@ -45,17 +45,17 @@ body {
     padding-top: 3% !important;
 }
 
-.post-image {
+.postpic {
     vertical-align: top;
     padding: 0 1% 1% 1%;
 }
 
-.summary-container {
+.paragraph {
     vertical-align: bottom;
     color: #fff;
 }
 
-.summary-container > h2 {
+.paragraph > h2 {
     text-shadow: 2px 2px 2px #000;
 }
 
@@ -69,7 +69,7 @@ body {
     margin: 0 auto;
 }
 
-img.mini-thumbnail {
+img.thumbnailsmall {
     width: 75px;
     height: 75px;
 }
@@ -80,31 +80,8 @@ img.thumbnail {
     margin: 0;
 }
 
-.hover-box {
-    background-color: #F5F5F5;
-    border: solid 1px #E3E3E3;
-    padding: 5px;
-    box-shadow: 1px 1px 1px 1px gray;
-    /* display: none; */
-}
 
-.hover-box > div {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.hover-profile-info {
-    padding: 5px;
-    width: 200px;
-}
-
-.hover-profile-name {
-    font-weight: bold;
-    font-style: italic;
-    font-size: 2rem;
-}
-
-.post-container {
+.picPanel {
     /* display: none; */
     width: 50%;
     margin: 0 auto !important;
@@ -124,7 +101,7 @@ input[type="file"] {
     text-align: center;
 }
 
-.picture-upload > div {
+.uploadpic > div {
     display: block !important;
     text-align: center;
 }
@@ -133,11 +110,11 @@ input[type="file"] {
     overflow: hidden;
 }
 
-.picture-upload > div > img, button {
+.uploadpic > div > img, button {
     display: inline-block;
 }
 
-.home-buttons-container {
+.hwPanel {
     margin-top: 5%;
 }
 
@@ -151,6 +128,11 @@ input[type="file"] {
     text-align: center;
 }
 
+.tab-pane{
+    height:370px;
+    overflow-y:scroll;
+}
+
 a {
     cursor: pointer !important;
 }
@@ -161,7 +143,7 @@ footer {
 }
 
 @media only screen and (max-width: 490px) {
-    .image-container {
+    .picContainer {
         margin: 0 auto;
     }
 }

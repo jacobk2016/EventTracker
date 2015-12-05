@@ -16,27 +16,22 @@ app.requestdetails = (function () {
         );
     }
 
-    function makeGetRequest(url, data, headers, success, error) {
+    function requestGet(url, data, headers, success, error) {
         return requestcreator(url, 'GET', data, headers, success, error);
     }
 
-    function makePostRequest(url, data, headers, success, error) {
+    function requestPost(url, data, headers, success, error) {
         return requestcreator(url, 'POST', JSON.stringify(data), headers, success, error);
     }
 
-    function makePutRequest(url, data, headers, success, error) {
+    function requestPut(url, data, headers, success, error) {
         return requestcreator(url, 'PUT', JSON.stringify(data), headers, success, error);
     }
 
-    function makeDeleteRequest(url, headers, success, error) {
-        return requestcreator(url, 'DELETE', null, headers, success, error);
-    }
-
     return {
-        get: makeGetRequest,
-        post: makePostRequest,
-        put: makePutRequest,
-        delete: makeDeleteRequest
+        get: requestGet,
+        post: requestPost,
+        put: requestPut,
     }
 
 }());
